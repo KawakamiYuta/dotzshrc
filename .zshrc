@@ -3,7 +3,7 @@ autoload -U compinit
 compinit -u
 
 bindkey -e
-export EDITOR=emacs
+export EDITOR=vim
 export LANG=ja_JP.UTF-8
 
 # prompt# {{{
@@ -12,7 +12,7 @@ colors
 #PROMPT=$'%{${fg[magenta]}%* ${reset_color}(%d)%}
 #PROMPT=$'%{${fg_bold[white]}%d ${reset_color}(%*)%}
 PROMPT='[%F{yellow}%~%f]`branch-status-check`
-%n%%'
+%n%% '
 #PROMPT2='${fg[white]}%n%% ${reset_color}'
 #PROMPT2='[%n]> '
 # %{${fg[yellow]}%}%~%{${reset_color}%}
@@ -114,9 +114,17 @@ alias e-en='vim ~/.zshrc'
 alias s-en='exec zsh'
 alias ant='sh ~/src/mkant.sh'
 alias dump='objdump -D /ant | less'
+alias e-mk='vim ~/ebara/src/sys/compile/i386-s/Makefile'
 #alias fpath='find ~/src -name'
 alias view='sh ~/vfpath.sh'
 alias gtags='vim -c 'Gtags $1' '
+alias refant='cd ~/ebara/src/sys/intr/i386'
+alias Gstat='git status'
+alias Ddiff='cd ~/TODO/fordiff/'
+alias Gdiff="git diff $1"
+alias Gcommit='git commit -a'
+alias ctags='/usr/local/bin/ctags'
+alias vim='/usr/local/bin/vim'
 
 
 #ssh
